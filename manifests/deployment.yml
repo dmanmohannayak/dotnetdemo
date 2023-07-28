@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dmanmohannayakdotnetdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dmanmohannayakdotnetdemo
+  template:
+    metadata:
+      labels:
+        app: dmanmohannayakdotnetdemo 
+    spec:
+      containers:
+        - name: dmanmohannayakdotnetdemo 
+          image: nayak.azurecr.io/dmanmohannayakdotnetdemo
+          ports:
+          - containerPort: 5000
